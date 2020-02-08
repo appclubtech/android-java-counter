@@ -40,7 +40,8 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:rippleColor="#FFFFFF"
         app:srcCompat="@drawable/ic_increase"
-        app:useCompatPadding="true" />
+        app:useCompatPadding="true"
+        android:onClick="IncreaseValue"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/decrease_button"
@@ -57,6 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#FFFFFF"
         app:srcCompat="@drawable/ic_decrease"
-        app:useCompatPadding="true" />
+        app:useCompatPadding="true"
+        android:onClick="DecreaseValue"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

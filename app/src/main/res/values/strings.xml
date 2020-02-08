@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Counter</string>
     <string name="counter_value">0</string>
+    <string name="below_zero_err">Value cannot decrease than 0</string>
 </resources>
