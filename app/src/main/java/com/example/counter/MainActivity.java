@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
@@ -42,7 +43,17 @@ public class MainActivity extends AppCompatActivity {
             count--;
             updateUI();
         } else {
-            Toast.makeText(this, R.string.below_zero_err, Toast.LENGTH_SHORT).show();
+            showToast(R.string.below_zero_err);
+        }
+    }
+
+    // Set counter value to 0 if value is not 0
+    public void ResetValue(View view) {
+        if (count != 0) {
+            count = 0;
+            updateUI();
+        } else {
+            showToast(R.string.already_at_zero);
         }
     }
 
@@ -50,4 +61,10 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI() {
         counter.setText(String.format(Locale.getDefault(), "%d", count));
     }
+
+    // Helper function for showing Toast
+    private void showToast(@StringRes int stringId) {
+        Toast.makeText(this, stringId, Toast.LENGTH_SHORT).show();
+    }
+
 }
